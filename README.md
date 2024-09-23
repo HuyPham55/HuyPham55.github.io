@@ -1,19 +1,5 @@
-# About me
-**You can call me Jacky. And computer is in my DNA.**
+# Vue 3 + TypeScript + Vite
 
-Check out my GitHub page profile at [huypham55.github.io](https://huypham55.github.io)
+This template should help get you started developing with Vue 3 and TypeScript in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.
 
-#
-
-<div align="center">
-  <img src="https://media.giphy.com/media/sULKEgDMX8LcI/giphy.gif" width="75%" />
-</div>
-
-#
-
-### Favorite quote
-> Yesterday is history, tomorrow is a mystery, but today is a gift. That is why it is called present. 
-
-<div>
-  <img src="https://rushter.com/counter.svg" align="right"/>
-</div>
+Learn more about the recommended Project Setup and IDE Support in the [Vue Docs TypeScript Guide](https://vuejs.org/guide/typescript/overview.html#project-setup).
