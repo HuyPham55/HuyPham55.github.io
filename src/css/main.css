@@ -1,0 +1,342 @@
+@import "./scss/transitions.scss";
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  @apply select-none;
+}
+
+/*nav a {*/
+/*    position: relative;*/
+/*    -moz-transition: all 0.3s linear;*/
+/*    -o-transition: all 0.3s linear;*/
+/*    -webkit-transition: all 0.3s linear;*/
+/*    transition: all 0.3s linear;*/
+/*}*/
+
+
+@layer utilities {
+  .backdrop-blur {
+    backdrop-filter: blur(15px);
+  }
+}
+
+@layer components {
+  nav a {
+    @apply md:px-4;
+  }
+
+  nav a:after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    @apply bg-black dark:bg-gray-400;
+    display: inline-block;
+    position: absolute;
+    bottom: 0.5em;
+    left: 50%;
+    margin-left: -4px;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    border-radius: 50%;
+    -moz-transform: scale(0, 0);
+    -ms-transform: scale(0, 0);
+    -webkit-transform: scale(0, 0);
+    transform: scale(0, 0);
+    -moz-transition: -moz-transform 0.3s cubic-bezier(0.61, 0, 0.405, 1.63);
+    -o-transition: -o-transform 0.3s cubic-bezier(0.61, 0, 0.405, 1.63);
+    -webkit-transition: -webkit-transform 0.3s cubic-bezier(0.61, 0, 0.405, 1.63);
+    transition: transform 0.3s cubic-bezier(0.61, 0, 0.405, 1.63);
+  }
+
+  nav:not(.sticky) a.active:after {
+    -moz-transform: scale(1, 1);
+    -ms-transform: scale(1, 1);
+    -webkit-transform: scale(1, 1);
+    transform: scale(1, 1);
+  }
+
+  .square {
+    aspect-ratio: 1
+  }
+
+  .sticky li {
+    @apply p-4;
+  }
+
+  .sticky a.active {
+    @apply underline
+  }
+
+  .tooltip {
+    @apply -mt-12 opacity-0 p-1.5 absolute;
+    @apply transition-all duration-500;
+    @apply rounded shadow-lg text-black bg-gray-400 dark:bg-black dark:text-gray-200;
+  }
+
+  .has-tooltip {
+    @apply items-center flex flex-col relative;
+  }
+
+  .has-tooltip:hover .tooltip {
+    @apply opacity-100 z-10 scale-110 -mt-14;
+  }
+
+  .main-container {
+    @apply bg-black font-sans;
+    @apply h-screen w-full overflow-hidden relative;
+  }
+
+  .nav-link {
+    @apply relative py-8;
+    @apply transition-transform dark:text-gray-400 dark:hover:text-gray-200 hover:underline;
+    @apply text-lg font-bold uppercase md:text-xl;
+  }
+
+  nav {
+    @apply inset-x-0 top-0 z-40;
+    @apply bg-opacity-50 bg-gray-300 dark:bg-opacity-50 dark:bg-black backdrop-blur shadow-lg;
+  }
+
+  .contact--container {
+    @apply mb-8 box-border py-4 mx-auto flex justify-evenly w-4/5 md:w-2/3;
+    @apply opacity-75 transition duration-500 bg-gray-400 rounded-3xl bg-opacity-25 hover:bg-opacity-50 backdrop-blur;
+  }
+
+  .contact__item {
+    @apply p-4 has-tooltip;
+    @apply hover:bg-gray-300 dark:hover:bg-black rounded-full text-gray-200 hover:text-black dark:text-black dark:hover:text-gray-200 transition-all;
+  }
+
+  .about--container {
+    @apply my-8 mx-auto w-full md:w-4/5 lg:w-2/3 flex flex-col md:flex-row;
+    @apply shadow-md dark:bg-black bg-gray-400 bg-opacity-50 dark:bg-opacity-50 md:rounded-lg text-gray-800 dark:text-gray-400 backdrop-blur;
+  }
+
+
+  .background {
+    @apply bg-gray-400 bg-opacity-50 rounded-lg text-black shadow-md;
+    @apply dark:bg-black dark:bg-opacity-50 dark:text-gray-400;
+  }
+
+  .inverted-background {
+    @apply dark:bg-gray-400 bg-black bg-opacity-50 rounded-lg dark:text-black text-gray-400 shadow-md transition;
+    @apply hover:animate-none hover:bg-gray-200 dark:hover:bg-gray-200 hover:text-black;
+  }
+
+  .hover--effect {
+    @apply transition;
+  }
+
+  .background.hover--effect {
+    @apply p-4;
+    @apply rounded-xl;
+  }
+
+  .hover--effect:hover {
+    @apply bg-gray-200 text-black;
+    @apply dark:bg-gray-400;
+  }
+
+  .background__translucent {
+    @apply hover--effect;
+  }
+
+  .technology--container {
+    @apply flex flex-wrap justify-evenly mt-4 py-4 md:py-2;
+    @apply background;
+  }
+
+  .technology--container .item--container {
+    @apply flex flex-col items-center py-4;
+    @apply md:w-1/3;
+  }
+
+  .technology--container .item--container > a {
+    @apply transition cursor-pointer delay-300 duration-500;
+    transform-style: preserve-3d;
+  }
+
+  .technology--container .item--container:hover > a {
+    transform: translateY(-16px) rotateY(180deg);
+  }
+
+  .technology--container .item--container:hover a > .icon--container > svg {
+    filter: saturate(100%) contrast(100%);
+  }
+
+  .technology--container .item--container a .icon--container {
+    @apply flex justify-center items-center;
+    @apply h-20 w-20 md:mt-4;
+    @apply mx-4 md:box-border;
+    backface-visibility: hidden;
+  }
+
+  .technology--container .item--container a .icon--container > svg {
+    @apply block max-w-full max-h-full;
+    filter: saturate(61%) contrast(61%);
+  }
+
+  .technology--container .item--container a .icon--container > svg.emphasize {
+    filter: saturate(100%) contrast(100%);
+
+  }
+
+  .technology--container .item--container a > .icon--container:first-of-type {
+    @apply absolute;
+  }
+
+  .technology--container .item--container a > .icon--container:last-of-type {
+    transform: rotateY(180deg);
+  }
+
+  .technology--container .item--container > p {
+    @apply duration-500;
+    @apply md:opacity-0 delay-300 transition;
+    @apply translate-y-2 md:-translate-y-4;
+  }
+
+  .technology--container .item--container p a:hover {
+    @apply underline;
+  }
+
+  .technology--container .item--container:hover > p {
+    @apply opacity-100;
+    transform: translateY(0px);
+  }
+
+  .section--title.active {
+    @apply bg-gray-200 text-black shadow-md tracking-wider;
+  }
+
+  .section--title {
+    @apply md:text-right px-4 border-b border-gray-800 text-lg font-semibold;
+    @apply hover:tracking-wide;
+    @apply background__translucent;
+  }
+
+  .detail--container {
+    @apply pt-4 flex items-center justify-center md:justify-start;
+    @apply break-all;
+  }
+
+  .detail--container svg {
+    @apply w-8 flex-shrink-0 fill-current;
+  }
+
+  .detail--container > div {
+
+  }
+
+  .profile-picture {
+    @apply hover:scale-110 transform transition border-4 border-gray-400 rounded-full overflow-hidden w-1/2 md:w-3/4 mx-auto my-4 md:my-8 square shadow-inner;
+    background-image: url('/images/image.jpg');
+    background-position: center;
+    background-size: cover;
+  }
+
+  .dark .profile-picture {
+    background-image: url('/images/image-dark.jpg');
+  }
+
+  .modal {
+    @apply fixed top-0 left-0 right-0 bottom-0 z-50;
+    @apply flex items-start md:items-center justify-center;
+    @apply transition opacity-0 backdrop-blur visible;
+  }
+
+  .modal.active {
+    @apply opacity-100;
+  }
+
+  .modal .form--container {
+    @apply p-4 background w-4/5 md:w-2/3 xl:w-1/3 md:w-auto my-4;
+  }
+
+  .modal .form--container form {
+    @apply flex flex-col;
+    @apply md:mx-4;
+  }
+
+  .modal .form--container form label span {
+    @apply text-red-600 dark:text-red-400;
+  }
+
+  .modal .form--container form label {
+  }
+
+  /*Form title and ThankYou page title*/
+  .modal .form--container h1 {
+    @apply text-center text-xl md:text-3xl font-semibold md:mt-4;
+  }
+
+  /*Used for both Form and ThankYou page*/
+  .modal .form--container div:not(:last-child) {
+    @apply mb-1 md:mb-4;
+  }
+
+  .modal .form--container form input {
+  }
+
+  .modal .form--container form textarea {
+    @apply max-h-full;
+  }
+
+  .modal .form--container form .form--input {
+    @apply w-full outline-none rounded;
+    @apply my-1 p-2;
+    @apply dark:bg-black;
+    @apply shadow-md;
+  }
+
+  .form--input:focus::placeholder {
+    @apply opacity-50;
+  }
+
+  .modal #hidden_frame {
+    @apply hidden;
+  }
+
+  /*Used for both Form and ThankYou page*/
+  .button--container {
+    @apply flex justify-between flex-col-reverse md:flex-row;
+  }
+
+  .button--container > button {
+    @apply flex-grow md:w-0 p-4;
+    @apply overflow-hidden;
+    @apply my-2;
+  }
+
+  textarea {
+    resize: none;
+  }
+
+  .para {
+    background-attachment: fixed;
+    /*background-position: center;*/
+    background-position: top;
+    /*background-repeat: no-repeat;*/
+    background-size: cover;
+    @apply h-full w-full;
+    @apply rounded-xl p-4 py-8;
+    @apply absolute top-0;
+  }
+
+  .card {
+    @apply shadow-md relative mx-4 flex-grow md:w-0;
+    @apply m-4 rounded-xl;
+  }
+
+  .card:not(:last-child) {
+    @apply mb-4;
+  }
+
+  .card--content {
+    @apply p-4 py-8 rounded-xl bg-gray-400 dark:bg-black dark:bg-opacity-50 bg-opacity-50 md:bg-opacity-50 hover:bg-opacity-75 dark:hover:bg-opacity-75 relative transition;
+    @apply h-full w-full;
+  }
+}
+
