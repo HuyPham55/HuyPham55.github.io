@@ -1,6 +1,6 @@
 import { createApp } from 'vue'
 //import './style.css'
-import './css/main.css'
+import './css/main.scss'
 import 'simplebar-vue/dist/simplebar.min.css';
 import App from './App.vue'
 import router from './router'
