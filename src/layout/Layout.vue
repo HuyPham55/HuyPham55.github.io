@@ -45,7 +45,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="main-container">
+  <div class="bg-black font-sans h-screen w-full overflow-hidden relative">
     <img src="/images/background.jpg"
          class="object-cover absolute w-full h-full"
          alt="">

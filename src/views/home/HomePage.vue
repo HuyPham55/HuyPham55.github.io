@@ -13,6 +13,11 @@ export default {
     GitHub,
     LinkedIn,
   },
+  data() {
+    return {
+      socials: []
+    }
+  },
   created: function () {
     this.socials = data.socials;
   },
@@ -57,8 +62,8 @@ export default {
       </svg>
     </div>
 
-    <div class="contact--container">
-      <a class="contact__item"
+    <div class=" mb-8 box-border py-4 mx-auto flex justify-evenly w-4/5 md:w-2/3 opacity-75 transition duration-500 bg-gray-400 rounded-3xl bg-opacity-25 hover:bg-opacity-50 backdrop-blur">
+      <a class="has-tooltip p-4 hover:bg-gray-300 dark:hover:bg-black rounded-full text-gray-200 hover:text-black dark:text-black dark:hover:text-gray-200 transition-all"
          v-for="item in socials"
          :key="item.title"
          target="_blank"

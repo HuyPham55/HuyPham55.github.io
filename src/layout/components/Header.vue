@@ -13,13 +13,13 @@ const lang = computed(() => store.lang);
 
 <template>
   <nav ref="nav"
-       :class="[isSticky?'sticky':'relative']"
+       :class="[isSticky?'sticky':'relative', 'inset-x-0 top-0 z-40 bg-opacity-50 bg-gray-300 dark:bg-opacity-50 dark:bg-black backdrop-blur shadow-lg']"
        role="navigation">
     <ul class="flex justify-around md:justify-evenly nav">
       <li class="py-8 transition"
           v-for="route in allRoutes"
           :key="route.name">
-        <router-link :to="route.path" class="nav-link">
+        <router-link :to="route.path" class="md:px-4 relative py-8 transition-transform dark:text-gray-400 dark:hover:text-gray-200 hover:underline text-lg font-bold uppercase md:text-xl">
           {{ label[route.name][lang] }}
         </router-link>
       </li>

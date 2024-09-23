@@ -24,9 +24,6 @@
 }
 
 @layer components {
-  nav a {
-    @apply md:px-4;
-  }
 
   nav a:after {
     content: '';
@@ -58,9 +55,6 @@
     transform: scale(1, 1);
   }
 
-  .square {
-    aspect-ratio: 1
-  }
 
   .sticky li {
     @apply p-4;
@@ -70,44 +64,18 @@
     @apply underline
   }
 
-  .tooltip {
-    @apply -mt-12 opacity-0 p-1.5 absolute;
-    @apply transition-all duration-500;
-    @apply rounded shadow-lg text-black bg-gray-400 dark:bg-black dark:text-gray-200;
-  }
 
   .has-tooltip {
     @apply items-center flex flex-col relative;
-  }
+    .tooltip {
+      @apply -mt-12 opacity-0 p-1.5 absolute;
+      @apply transition-all duration-500;
+      @apply rounded shadow-lg text-black bg-gray-400 dark:bg-black dark:text-gray-200;
+    }
 
-  .has-tooltip:hover .tooltip {
-    @apply opacity-100 z-10 scale-110 -mt-14;
-  }
-
-  .main-container {
-    @apply bg-black font-sans;
-    @apply h-screen w-full overflow-hidden relative;
-  }
-
-  .nav-link {
-    @apply relative py-8;
-    @apply transition-transform dark:text-gray-400 dark:hover:text-gray-200 hover:underline;
-    @apply text-lg font-bold uppercase md:text-xl;
-  }
-
-  nav {
-    @apply inset-x-0 top-0 z-40;
-    @apply bg-opacity-50 bg-gray-300 dark:bg-opacity-50 dark:bg-black backdrop-blur shadow-lg;
-  }
-
-  .contact--container {
-    @apply mb-8 box-border py-4 mx-auto flex justify-evenly w-4/5 md:w-2/3;
-    @apply opacity-75 transition duration-500 bg-gray-400 rounded-3xl bg-opacity-25 hover:bg-opacity-50 backdrop-blur;
-  }
-
-  .contact__item {
-    @apply p-4 has-tooltip;
-    @apply hover:bg-gray-300 dark:hover:bg-black rounded-full text-gray-200 hover:text-black dark:text-black dark:hover:text-gray-200 transition-all;
+    &:hover .tooltip {
+      @apply opacity-100 z-10 scale-110 -mt-14;
+    }
   }
 
   .about--container {
@@ -231,7 +199,7 @@
   }
 
   .profile-picture {
-    @apply hover:scale-110 transform transition border-4 border-gray-400 rounded-full overflow-hidden w-1/2 md:w-3/4 mx-auto my-4 md:my-8 square shadow-inner;
+    @apply hover:scale-110 transform transition border-4 border-gray-400 rounded-full overflow-hidden w-1/2 md:w-3/4 mx-auto my-4 md:my-8 aspect-square shadow-inner;
     background-image: url('/images/image.jpg');
     background-position: center;
     background-size: cover;
