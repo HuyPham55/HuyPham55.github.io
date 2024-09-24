@@ -9,11 +9,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-  name: "Email"
-}
-</script>
 
 <style scoped>
 

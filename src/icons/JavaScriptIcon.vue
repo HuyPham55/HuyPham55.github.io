@@ -7,11 +7,7 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "JavaScriptIcon"
-}
-</script>
+
 
 <style scoped>
 

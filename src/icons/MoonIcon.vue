@@ -9,11 +9,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-  name: "MoonIcon"
-}
-</script>
 
 <style scoped>
 

@@ -16,11 +16,7 @@
     </svg>
 </template>
 
-<script>
-export default {
-  name: "VueIcon"
-}
-</script>
+
 
 <style scoped>
 

@@ -12,11 +12,7 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "Tailwind"
-}
-</script>
+
 
 <style scoped>
 

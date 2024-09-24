@@ -19,11 +19,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "GraphQLIcon"
-}
-</script>
 
 <style scoped>
 

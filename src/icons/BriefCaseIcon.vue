@@ -9,12 +9,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "BriefCaseIcon"
-}
-</script>
-
 <style scoped>
 
 </style>

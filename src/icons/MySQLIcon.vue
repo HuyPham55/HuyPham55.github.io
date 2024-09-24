@@ -6,11 +6,7 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "MySQLIcon"
-}
-</script>
+
 
 <style scoped>
 

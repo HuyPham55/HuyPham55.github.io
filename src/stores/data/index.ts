@@ -1,4 +1,6 @@
-const data = {
+import {Data} from "./types.ts";
+
+const data:Data = {
     form: {
         action: 'https://docs.google.com/forms/u/0/d/e/1FAIpQLScnynTIJYKSAr_pYgVOWHiEMZH9AUoGeReZfZ1nVYRWqXNdfw/formResponse',
         inputs: {
@@ -18,7 +20,7 @@ const data = {
                 },
                 description: {
                     en: 'I will contact you as soon as possible.',
-                    vn: 'Tôi sẽ liên hệ với bạn trong thời gian sớm nhất.',
+                    vi: 'Tôi sẽ liên hệ với bạn trong thời gian sớm nhất.',
                 }
             },
             name: {

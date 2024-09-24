@@ -7,11 +7,6 @@
   </svg>
 </template>
 
-<script>
-export default {
-  name: "DockerLogo"
-}
-</script>
 
 <style scoped>
 

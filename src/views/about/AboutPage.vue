@@ -16,8 +16,9 @@ import data from "../../stores/data";
 import {useAppStore} from "../../stores/modules/app.ts";
 import {computed, onMounted, ref} from "vue";
 import ChangeLangComponent from "./components/ChangeLangComponent.vue";
+import {Details, LanguageLabels} from "../../stores/data/types.ts";
 
-const details = data.details
+const details:Details = data.details
 const timeline = ref(data.timeline)
 const experiences = ref(data.experiences)
 const technologies = ref(data.technologies)
@@ -25,14 +26,14 @@ const media_skills = ref(data.media_skills)
 const communications = ref(data.communications)
 const form = data.form;
 const appStore = useAppStore()
-const lang = computed(() => appStore.lang)
+const lang:keyof LanguageLabels = appStore.lang
 const label = computed(() => appStore.label)
 
 function isTimelineHovered() {
   return timeline.value.find(item => item.hover);
 }
 
-const hoverHandler = function (item, value) {
+const hoverHandler = function (item:any, value:boolean) {
   item.hover = value;
 }
 
@@ -71,7 +72,7 @@ onMounted(() => {
             </div>
             <div class="detail--container">
               <location-icon/>
-              <address>{{ details['address'][lang] }}</address>
+              <address>{{ details['address' ][lang] }}</address>
             </div>
             <div class="detail--container">
               <email-icon/>
@@ -93,7 +94,7 @@ onMounted(() => {
                    :key="item.title">
                 <!-- left -->
                 <div class="col-start-1 background hover--effect col-end-5 my-4 cursor-pointer"
-                     v-if="!index%2"
+                     v-if="!(index%2)"
                      @mouseover="hoverHandler(item, true)"
                      @mouseleave="hoverHandler(item, false)">
                   <h3 :class="{'font-semibold text-base mb-1':1, 'underline':item.hover }">

@@ -28,11 +28,7 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "RedisIcon"
-}
-</script>
+
 
 <style scoped>
 

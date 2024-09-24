@@ -8,11 +8,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-  name: "Globe"
-}
-</script>
 
 <style scoped>
 

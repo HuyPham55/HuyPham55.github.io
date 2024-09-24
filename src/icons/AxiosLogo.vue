@@ -7,12 +7,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "AxiosLogo"
-}
-</script>
-
 <style scoped>
 
 </style>

@@ -10,12 +10,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "PostCSSIcon"
-}
-</script>
-
 <style scoped>
 
 </style>

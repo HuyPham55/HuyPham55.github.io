@@ -6,11 +6,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "CSSIcon"
-}
-</script>
 
 <style scoped>
 

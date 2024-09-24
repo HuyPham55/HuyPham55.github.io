@@ -9,11 +9,7 @@
     </svg>
 </template>
 
-<script>
-export default {
-  name: "Media"
-}
-</script>
+
 
 <style scoped>
 

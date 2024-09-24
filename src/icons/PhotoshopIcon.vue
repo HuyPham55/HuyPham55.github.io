@@ -13,11 +13,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "PhotoshopIcon"
-}
-</script>
 
 <style scoped>
 

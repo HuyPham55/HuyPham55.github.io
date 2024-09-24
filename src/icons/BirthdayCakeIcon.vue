@@ -11,11 +11,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "BirthdayCakeIcon"
-}
-</script>
 
 <style scoped>
 

@@ -6,11 +6,7 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "HTMLIcon"
-}
-</script>
+
 
 <style scoped>
 

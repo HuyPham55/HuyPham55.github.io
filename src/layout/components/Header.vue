@@ -2,13 +2,25 @@
 import {useAppStore} from "../../stores/modules/app.ts";
 import {computed} from "vue";
 import {useRouter} from "vue-router";
+import {PageLabels} from "../../stores/data/types.ts";
 defineProps(['isSticky'])
 
 const router = useRouter()
 const store = useAppStore();
 const label = computed(() => store.label);
-const allRoutes = computed(() => router.options.routes.pop()?.children);
+const allRoutes = computed(() => {
+  let arr = router.options.routes;
+  return arr[0]?.children
+});
 const lang = computed(() => store.lang);
+
+const getTitle = function(route: any) {
+  let key = route.name as keyof PageLabels;
+  if (key === 'home' || key === 'about') {
+    //TODO: Added automated recognition for route.name (instead of explicit declaring)
+    return label.value[key][lang.value]
+  }
+}
 </script>
 
 <template>
@@ -20,7 +32,7 @@ const lang = computed(() => store.lang);
           v-for="route in allRoutes"
           :key="route.name">
         <router-link :to="route.path" class="md:px-4 relative py-8 transition-transform dark:text-gray-400 dark:hover:text-gray-200 hover:underline text-lg font-bold uppercase md:text-xl">
-          {{ label[route.name][lang] }}
+          {{getTitle(route)}}
         </router-link>
       </li>
     </ul>

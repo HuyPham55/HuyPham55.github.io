@@ -6,7 +6,7 @@
 </template>
 
 <script>
-
+import {defineComponent} from "vue";
 function isInViewport(el) {
   const rect = el.getBoundingClientRect();
   return (
@@ -28,7 +28,7 @@ function delay(callback, ms) {
   };
 }
 
-export default {
+export default defineComponent({
   name: "CountUp",
   props: {
     countTo: {
@@ -91,7 +91,7 @@ export default {
     this.initialize();
     this.listenToScroll();
   },
-}
+})
 </script>
 
 <style scoped>

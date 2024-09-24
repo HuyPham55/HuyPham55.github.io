@@ -5,11 +5,7 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "jQueryIcon"
-}
-</script>
+
 
 <style scoped>
 

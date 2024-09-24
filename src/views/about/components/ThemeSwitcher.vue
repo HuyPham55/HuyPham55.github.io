@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {defineAsyncComponent, ref, watch} from "vue";
+import {ref, watch} from "vue";
 import {useAppStore} from "../../../stores/modules/app.ts";
 import data from "../../../stores/data";
 import MoonIcon from "../../../icons/MoonIcon.vue";

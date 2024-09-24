@@ -4,12 +4,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "DownloadIcon"
-}
-</script>
-
 <style scoped>
 
 </style>

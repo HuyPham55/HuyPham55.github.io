@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import {computed, onMounted, ref, toRef} from "vue";
+import {computed, onMounted} from "vue";
 import simplebar from "simplebar-vue";
 import Header from "./components/Header.vue";
 import {useAppStore} from "../stores/modules/app.ts";

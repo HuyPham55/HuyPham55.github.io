@@ -8,11 +8,6 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "BootstrapIcon"
-}
-</script>
 
 <style scoped>
 

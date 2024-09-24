@@ -1,23 +1,27 @@
 // stores/counter.js
 import {defineStore} from 'pinia'
 import data from '../data';
+import {LanguageLabels} from "../data/types.ts";
 
 export const useAppStore = defineStore('appStore', {
     state: () => {
         return {
-            lang: '',
+            lang: '' as keyof LanguageLabels,
             languages: data.languages,
             label: data.labels,
             clientHeight: 0,
-
         }
     },
 
     actions: {
         setLanguage(key: string = '') {
             let firstLang = [...this.languages].pop();
+            if (key === 'en' || key === 'vi') {
+                this.lang = key;
+                return;
+            }
             if (firstLang !== undefined) {
-                this.lang = key.length ? key : firstLang?.key;
+                this.lang = firstLang.key as keyof LanguageLabels;
             }
         },
         changeLanguage() {

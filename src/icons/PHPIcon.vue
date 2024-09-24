@@ -6,11 +6,7 @@
     </svg>
 </template>
 
-<script>
-export default {
-    name: "PHPIcon"
-}
-</script>
+
 
 <style scoped>
 
