@@ -51,8 +51,7 @@ onMounted(() => {
   <div>
     <div class="about--container">
       <aside class="md:w-1/3">
-        <div
-            class="border-b md:border-b-0 md:mb-4 md:border-r border-gray-400 border-opacity-75 py-4 md:py-0 md:px-4 mx-4 md:mx-0 md:sticky top-24">
+        <div class="border-b md:border-b-0 md:mb-4 md:border-r border-gray-400 border-opacity-75 py-4 md:py-0 md:px-4 mx-4 md:mx-0 md:sticky top-24">
           <div class="profile-picture">
           </div>
           <div class="text-center font-bold uppercase text-3xl md:text-xl">
@@ -68,7 +67,7 @@ onMounted(() => {
             </div>
             <div class="detail--container">
               <birthday-cake-icon/>
-              <span>2000</span>
+              <span>24</span>
             </div>
             <div class="detail--container">
               <location-icon/>

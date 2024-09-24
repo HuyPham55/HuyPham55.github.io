@@ -43,6 +43,7 @@ import MySQLIcon from "../../../icons/MySQLIcon.vue";
 import PHPIcon from "../../../icons/PHPIcon.vue";
 import DockerLogo from "../../../icons/DockerLogo.vue";
 import ElasticsearchIcon from "../../../icons/ElasticsearchIcon.vue";
+import TypeScriptIcon from "../../../icons/TypeScriptIcon.vue";
 
 export default {
   name: "TechnologyComponent",
@@ -73,6 +74,7 @@ export default {
     PHPIcon,
     DockerLogo,
     ElasticsearchIcon,
+    TypeScriptIcon,
   },
   created: function () {
   },

@@ -8,6 +8,9 @@ export default {
   darkMode: 'class', // or 'media' or 'class'
   theme: {
     extend: {
+      blur: {
+        xs: '2px',
+      },
       keyframes: {
         ping: {
           '75%, 100%': {transform: 'scale(1.5)', opacity: '0', filter: 'blur(2px)'},

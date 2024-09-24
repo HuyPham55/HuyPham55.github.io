@@ -319,6 +319,14 @@ const data = {
 
                 },
                 {
+                    title: "TypeScript",
+                    icon: "TypeScriptIcon",
+                    url: "",
+                    content: "",
+                    colorClass: '#007acc',
+
+                },
+                {
                     title: "PHP",
                     icon: "PHPIcon",
                     url: "https://www.php.net/",

@@ -47,7 +47,7 @@ onMounted(() => {
 <template>
   <div class="bg-black font-sans h-screen w-full overflow-hidden relative">
     <img src="/images/background.jpg"
-         class="object-cover absolute w-full h-full"
+         class="object-cover absolute w-full h-full filter blur-xs"
          alt="">
     <simplebar
         data-simplebar-auto-hide="true"
