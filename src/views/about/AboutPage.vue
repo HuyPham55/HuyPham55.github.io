@@ -50,7 +50,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <div class="about--container">
+    <div class="my-8 mx-auto w-full md:w-4/5 lg:w-2/3 flex flex-col md:flex-row shadow-md dark:bg-black bg-gray-400 bg-opacity-50 dark:bg-opacity-50 md:rounded-lg text-gray-800 dark:text-gray-400 backdrop-blur">
       <aside class="md:w-1/3">
         <div class="border-b md:border-b-0 md:mb-4 md:border-r border-gray-400 border-opacity-75 py-4 md:py-0 md:px-4 mx-4 md:mx-0 md:sticky top-24">
           <div class="profile-picture">
@@ -215,7 +215,7 @@ onMounted(() => {
             {{ label['titles']['communication'][lang] }}
           </h1>
           <div class="lg:p-2">
-            <div class="mt-4 p-4 flex flex-col md:flex-row justify-around flex-wrap background">
+            <div class="mt-4 p-4 flex flex-col md:flex-row justify-around flex-wrap bg-gray-400 bg-opacity-50 rounded-lg text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400">
               <div class="card" v-for="(item, index) in communications" :key="index">
                 <div class='para' :style="`background-image: url(${item.icon})`">
                 </div>
@@ -231,12 +231,12 @@ onMounted(() => {
         </section>
       </article>
     </div>
-    <section class="about--container justify-evenly">
-      <div class="mt-4 mx-4 md:mr-0 flex-grow transition md:w-0">
+    <section class="my-8 mx-auto w-full md:w-4/5 lg:w-2/3 flex flex-col md:flex-row shadow-md dark:bg-black bg-gray-400 bg-opacity-50 dark:bg-opacity-50 md:rounded-lg text-gray-800 dark:text-gray-400 backdrop-blur justify-evenly gap-4 p-4">
+      <div class="flex-grow transition md:w-0">
         <theme-switcher/>
       </div>
-      <div class="mt-4 mx-4 md:mr-0 flex-grow transition md:w-0">
-        <div class="cursor-pointer flex items-center bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black rounded-lg">
+      <div class="flex-grow transition md:w-0">
+        <div class="cursor-pointer flex items-center bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black">
           <div class="h-8 w-8 overflow-hidden">
             <download-icon/>
           </div>
@@ -245,7 +245,7 @@ onMounted(() => {
           </span>
         </div>
       </div>
-      <div class="my-4 mx-4 flex-grow transition md:w-0">
+      <div class="flex-grow transition md:w-0">
         <ChangeLangComponent/>
       </div>
     </section>

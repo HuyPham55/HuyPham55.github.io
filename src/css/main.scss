@@ -78,40 +78,6 @@
     }
   }
 
-  .about--container {
-    @apply my-8 mx-auto w-full md:w-4/5 lg:w-2/3 flex flex-col md:flex-row;
-    @apply shadow-md dark:bg-black bg-gray-400 bg-opacity-50 dark:bg-opacity-50 md:rounded-lg text-gray-800 dark:text-gray-400 backdrop-blur;
-  }
-
-
-  .background {
-    //done
-    @apply bg-gray-400 bg-opacity-50 rounded-lg text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400;
-  }
-
-  .inverted-background {
-    //@apply dark:bg-gray-400 bg-black bg-opacity-50 rounded-lg dark:text-black text-gray-400 shadow-md transition;
-    //@apply hover:animate-none hover:bg-gray-200 dark:hover:bg-gray-200 hover:text-black;
-    @apply dark:bg-gray-400 bg-black bg-opacity-50 rounded-lg dark:text-black text-gray-400 shadow-md transition hover:animate-none hover:bg-gray-200 dark:hover:bg-gray-200 hover:text-black;
-  }
-
-  .hover--effect {
-    @apply transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400;
-    //done
-  }
-
-  .background.hover--effect {
-    //@apply p-4;
-    //@apply rounded-xl;
-    @apply bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black;
-    //done
-  }
-
-  .background__translucent {
-    //@apply hover--effect;
-    @apply transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400;
-    //done
-  }
 
   .technology--container {
     @apply flex flex-wrap justify-evenly mt-4 py-4 md:py-2;
