@@ -59,7 +59,7 @@ onMounted(() => {
             <h1 class="mt-4">{{ details['name'][lang] }}</h1>
           </div>
           <div class="p-0 lg:p-4">
-            <h1 class="hidden md:block text-center background__translucent rounded">
+            <h1 class="hidden md:block text-center transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 rounded">
               {{ label['details'][lang] }}
             </h1>
             <div class="detail--container">
@@ -93,7 +93,7 @@ onMounted(() => {
                    :class="['flex md:contents', index%2?'':'flex-row-reverse justify-end']"
                    :key="item.title">
                 <!-- left -->
-                <div class="col-start-1 background hover--effect col-end-5 my-4 cursor-pointer"
+                <div class="col-start-1 bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black col-end-5 my-4 cursor-pointer"
                      v-if="!(index%2)"
                      @mouseover="hoverHandler(item, true)"
                      @mouseleave="hoverHandler(item, false)">
@@ -114,7 +114,7 @@ onMounted(() => {
                 <!-- right -->
                 <div
                     v-if="index%2"
-                    class="background hover--effect col-start-6 col-end-10 my-4 cursor-pointer"
+                    class="bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black col-start-6 col-end-10 my-4 cursor-pointer"
                     @mouseover="hoverHandler(item, true)"
                     @mouseleave="hoverHandler(item, false)">
                   <h3 :class="{'font-semibold text-base mb-1':1, 'underline':item.hover }">
@@ -135,7 +135,7 @@ onMounted(() => {
           </h1>
           <div class="lg:p-2">
             <div
-                class="background hover--effect flex flex-row-reverse items-center justify-end mt-4">
+                class="bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black flex flex-row-reverse items-center justify-end mt-4">
               <h3 class="">
                 Website development & maintenance
               </h3>
@@ -144,7 +144,7 @@ onMounted(() => {
               </div>
             </div>
             <div
-                class="background hover--effect flex flex-row-reverse items-center justify-end mt-4">
+                class="bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black flex flex-row-reverse items-center justify-end mt-4">
               <h3 class="">
                 Media content editor
               </h3>
@@ -159,7 +159,7 @@ onMounted(() => {
             {{ label['titles']['work_experience'][lang] }}
           </h1>
           <div class="lg:p-2">
-            <div class="background hover--effect mt-4 flex justify-around flex-wrap">
+            <div class="bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black mt-4 flex justify-around flex-wrap">
               <div class="flex flex-col text-center py-4 p-2"
                    v-for="experience in experiences"
                    :key="experience.number+experience.suffix">
@@ -191,7 +191,7 @@ onMounted(() => {
             <div class="mt-4 px-4">
               <i>{{ media_skills.description[lang] }}</i>
             </div>
-            <ul class="background mt-4 justify-around flex p-4 flex-wrap">
+            <ul class="bg-gray-400 bg-opacity-50 rounded-lg text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 mt-4 justify-around flex p-4 flex-wrap">
               <li class="mx-4 my-4 h-auto w-20">
                 <img src="/images/icons/photoshop-cc-4.svg" alt="" class="shadow-md cursor-pointer"
                      title="Adobe Photoshop" loading="lazy"
@@ -236,7 +236,7 @@ onMounted(() => {
         <theme-switcher/>
       </div>
       <div class="mt-4 mx-4 md:mr-0 flex-grow transition md:w-0">
-        <div class="cursor-pointer flex items-center background hover--effect rounded-lg">
+        <div class="cursor-pointer flex items-center bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black rounded-lg">
           <div class="h-8 w-8 overflow-hidden">
             <download-icon/>
           </div>

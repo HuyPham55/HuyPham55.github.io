@@ -9,7 +9,7 @@ const clickHandler = function() {
 </script>
 
 <template>
-  <div class="cursor-pointer flex items-center background hover--effect rounded-lg"
+  <div class="cursor-pointer flex items-center bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black rounded-lg"
        @click="clickHandler">
     <div class="h-8 w-8 overflow-hidden">
       <globe class="fill-current"/>
