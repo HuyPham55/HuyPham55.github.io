@@ -7,7 +7,7 @@
       <i>{{ formData.labels.thank_you.description[lang] }}</i>
     </div>
     <div class="button--container">
-      <button class="background hover--effect md:mx-4" type="button" @click="$emit('sessionHide')">
+      <button class="bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl md:mx-4" type="button" @click="$emit('sessionHide')">
         {{ formData.labels.buttons.close[lang] }}
       </button>
     </div>
