@@ -37,10 +37,10 @@
                   class="form--input" maxlength="500"></textarea>
       </div>
       <div class="button--container">
-        <button class="bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black" type="button" @click="hideModal">
+        <button class="bg-primary bg-primary-hover text-primary shadow-md  transition hover:text-black p-4 rounded-xl dark:hover:text-black" type="button" @click="hideModal">
           {{ formData.labels.buttons.cancel[lang] }}
         </button>
-        <button class="bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black md:mx-4" type="button" @click="sessionHide">
+        <button class="bg-primary bg-primary-hover text-primary shadow-md  transition hover:text-black p-4 rounded-xl dark:hover:text-black md:mx-4" type="button" @click="sessionHide">
           {{ formData.labels.buttons.hide[lang] }}
         </button>
         <button :class="['dark:bg-gray-400 bg-black bg-opacity-50 rounded-lg dark:text-black text-gray-400 shadow-md transition hover:animate-none hover:bg-gray-200 dark:hover:bg-gray-200 hover:text-black', submitButtonClass]" type="button" @click="validate">

@@ -44,7 +44,7 @@ watch(nightMode, (newValue) => {
 
 <template>
   <div
-      class="cursor-pointer flex items-center bg-gray-400 bg-opacity-50 text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400 transition hover:bg-gray-200 hover:text-black dark:hover:bg-gray-400 p-4 rounded-xl dark:hover:text-black"
+      class="cursor-pointer flex items-center bg-primary bg-primary-hover text-primary shadow-md  transition hover:text-black p-4 rounded-lg dark:hover:text-black"
       @mouseenter="mouseEnterHandler"
       @mouseleave="mouseLeaveHandler"
       @click="handler">

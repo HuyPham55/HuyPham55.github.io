@@ -8,6 +8,9 @@
   @apply select-none;
 }
 
+body {
+  @apply subpixel-antialiased;
+}
 /*nav a {*/
 /*    position: relative;*/
 /*    -moz-transition: all 0.3s linear;*/
@@ -82,7 +85,7 @@
   .technology--container {
     @apply flex flex-wrap justify-evenly mt-4 py-4 md:py-2;
     //@apply background;
-    @apply bg-gray-400 bg-opacity-50 rounded-lg text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400;
+    @apply bg-gray-400 bg-opacity-50 rounded-3xl text-black shadow-md dark:bg-black dark:bg-opacity-50 dark:text-gray-400;
   }
 
   .technology--container .item--container {
@@ -261,13 +264,13 @@
     /*background-repeat: no-repeat;*/
     background-size: cover;
     @apply h-full w-full;
-    @apply rounded-xl p-4 py-8;
+    @apply p-4 py-8;
     @apply absolute top-0;
   }
 
   .card {
     @apply shadow-md relative mx-4 flex-grow md:w-0;
-    @apply m-4 rounded-xl;
+    @apply m-4 rounded-lg overflow-hidden;
   }
 
   .card:not(:last-child) {
@@ -275,8 +278,20 @@
   }
 
   .card--content {
-    @apply p-4 py-8 rounded-xl bg-gray-400 dark:bg-black dark:bg-opacity-50 bg-opacity-50 md:bg-opacity-50 hover:bg-opacity-75 dark:hover:bg-opacity-75 relative transition;
+    @apply p-4 py-8 hover:bg-opacity-75 dark:hover:bg-opacity-75 relative transition;
+    @apply bg-primary;
     @apply h-full w-full;
   }
 }
 
+.bg-primary {
+  @apply bg-gray-400 bg-opacity-50 dark:bg-black dark:bg-opacity-50;
+}
+
+.bg-primary-hover {
+  @apply hover:bg-opacity-50 hover:bg-gray-200 dark:hover:bg-opacity-50 dark:hover:bg-gray-400;
+}
+
+.text-primary {
+  @apply text-base-300 dark:text-base-200;
+}
