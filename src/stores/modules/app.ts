@@ -15,11 +15,12 @@ export const useAppStore = defineStore('appStore', {
 
     actions: {
         setLanguage(key: string = '') {
-            let firstLang = [...this.languages].pop();
             if (key === 'en' || key === 'vi') {
                 this.lang = key;
                 return;
             }
+
+            let firstLang = [...this.languages].pop();
             if (firstLang !== undefined) {
                 this.lang = firstLang.key as keyof LanguageLabels;
             }

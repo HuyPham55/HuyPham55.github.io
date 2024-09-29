@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import {useAppStore} from "../../stores/modules/app.ts";
+import {useAppStore} from "@/stores/modules/app.ts";
 import {computed} from "vue";
 import {useRouter} from "vue-router";
-import {PageLabels} from "../../stores/data/types.ts";
+import {PageLabels} from "@/stores/data/types.ts";
 defineProps(['isSticky'])
 
 const router = useRouter()

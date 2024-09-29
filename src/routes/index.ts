@@ -1,6 +1,6 @@
 import {RouteRecordRaw} from "vue-router";
-import HomePage from "../views/home/HomePage.vue";
-import AboutPage from "../views/about/AboutPage.vue";
+import HomePage from "@/views/home/HomePage.vue";
+import AboutPage from "@/views/about/AboutPage.vue";
 import Layout from "../layout/Layout.vue";
 
 const routes: Array<RouteRecordRaw> = [

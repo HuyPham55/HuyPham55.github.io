@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import Globe from "../../../icons/Globe.vue";
-import {useAppStore} from "../../../stores/modules/app.ts";
+import Globe from "@/icons/Globe.vue";
+import {useAppStore} from "@/stores/modules/app.ts";
 
 const appStore = useAppStore();
 const clickHandler = function() {

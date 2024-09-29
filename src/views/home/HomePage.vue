@@ -1,14 +1,14 @@
 <script lang="ts">
-import StackOverflow from "../../icons/StackOverflow.vue";
-import Email from "../../icons/Email.vue";
-import GitHub from "../../icons/GitHub.vue";
-import LinkedIn from "../../icons/LinkedIn.vue";
-import data from "../../stores/data";
+import StackOverflow from "@/icons/StackOverflow.vue";
+import Email from "@/icons/Email.vue";
+import GitHub from "@/icons/GitHub.vue";
+import LinkedIn from "@/icons/LinkedIn.vue";
+import data from "@/stores/data";
 import {defineComponent} from "vue";
-import Signature from "../../icons/Signature.vue";
-import {Social} from "../../stores/data/types.ts";
+import Signature from "@/icons/Signature.vue";
+import {Social} from "@/stores/data/types.ts";
 export default defineComponent({
-  name: "Home",
+  name: "HomePage",
   components: {
     Signature,
     StackOverflow,

@@ -1,22 +1,22 @@
 <script setup lang="ts">
-import BriefCaseIcon from "../../icons/BriefCaseIcon.vue";
-import BirthdayCakeIcon from "../../icons/BirthdayCakeIcon.vue";
-import LocationIcon from "../../icons/LocationIcon.vue";
-import EmailIcon from "../../icons/EmailIcon.vue";
-import Globe from "../../icons/Globe.vue";
-import Media from "../../icons/Media.vue";
-import DownloadIcon from "../../icons/DownloadIcon.vue";
+import BriefCaseIcon from "@/icons/BriefCaseIcon.vue";
+import BirthdayCakeIcon from "@/icons/BirthdayCakeIcon.vue";
+import LocationIcon from "@/icons/LocationIcon.vue";
+import EmailIcon from "@/icons/EmailIcon.vue";
+import Globe from "@/icons/Globe.vue";
+import Media from "@/icons/Media.vue";
+import DownloadIcon from "@/icons/DownloadIcon.vue";
 
 import CountUp from "./components/CountUp.vue";
 import TechnologyComponent from "./components/TechnologyComponent.vue";
 import ThemeSwitcher from "./components/ThemeSwitcher.vue";
 import ModalForm from "./components/ModalForm.vue";
 
-import data from "../../stores/data";
-import {useAppStore} from "../../stores/modules/app.ts";
+import data from "@/stores/data";
+import {useAppStore} from "@/stores/modules/app.ts";
 import {computed, onMounted, ref} from "vue";
 import ChangeLangComponent from "./components/ChangeLangComponent.vue";
-import {Details, LanguageLabels} from "../../stores/data/types.ts";
+import {Details, LanguageLabels} from "@/stores/data/types.ts";
 
 const details:Details = data.details
 const timeline = ref(data.timeline)
